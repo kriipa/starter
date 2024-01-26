@@ -24,7 +24,7 @@ const Login = () => {
   });
   const onSubmitHandler = async (data) => {
     try {
-      const result = await authMutation.mutateAsync(["patch", "", data]);
+      const result = await authMutation.mutateAsync(["post", "", data]);
       if (result?.success) {
         console.log("Login success");
         const userDetailsData = {
